@@ -1,0 +1,9 @@
+:root{
+    /* definir as variaveis de cor e tamanhos e fontes aqui */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
