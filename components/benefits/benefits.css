@@ -1,0 +1,296 @@
+.benefits {
+    padding: 100px 0;
+    background: var(--color-bg-soft); 
+    overflow: hidden;
+}
+
+.benefits-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 120px; 
+    margin-top: 60px;
+}
+
+.benefit-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.benefit-row.reverse .benefit-content {
+    order: 2; /* Texto vai para a direita */
+}
+.benefit-row.reverse .benefit-visual {
+    order: 1; /* Visual vai para a esquerda */
+}
+
+/* --- CONTEÚDO DE TEXTO --- */
+.benefit-content {
+    position: relative;
+}
+
+.benefit-number {
+    font-size: 4rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.03); 
+    position: absolute;
+    top: -3.5rem;
+    left: -1rem;
+    z-index: 0;
+    line-height: 1;
+}
+
+.benefit-content h3 {
+    position: relative;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    z-index: 1;
+}
+
+.benefit-content p {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    z-index: 1;
+    position: relative;
+}
+
+.benefit-content strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.benefit-checklist {
+    list-style: none;
+    z-index: 1;
+    position: relative;
+}
+
+.benefit-checklist li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-text-main);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.benefit-checklist li::before {
+    content: "✓";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--color-primary);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.benefit-visual {
+    position: relative;
+    height: 350px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+.benefit-row:hover .benefit-visual {
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
+}
+
+/* Visual 1: Card de Autoridade */
+.fake-ui-card {
+    width: 260px;
+    padding: 20px;
+    background: #0b1225;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    transform: rotate(-5deg);
+    transition: transform 0.4s ease;
+}
+.benefit-row:hover .fake-ui-card { transform: rotate(0deg) scale(1.05); }
+
+.ui-header { display: flex; gap: 15px; margin-bottom: 20px; }
+.ui-avatar { width: 40px; height: 40px; background: var(--color-primary); border-radius: 50%; }
+.ui-lines { display: flex; flex-direction: column; gap: 6px; justify-content: center; }
+.ui-line { height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; }
+.ui-line.long { width: 120px; }
+.ui-line.short { width: 70px; }
+
+.stat-box { background: rgba(59, 130, 246, 0.1); padding: 10px; border-radius: 8px; text-align: center; }
+.stat-box span { display: block; font-size: 0.8rem; color: var(--color-text-muted); }
+.stat-box strong { font-size: 1.5rem; color: var(--color-primary); }
+
+/* Visual 2: Chat */
+.fake-chat-ui {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.chat-bubble {
+    padding: 12px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    max-width: 80%;
+}
+.chat-bubble.left { background: rgba(255,255,255,0.1); align-self: flex-start; border-bottom-left-radius: 4px; }
+.chat-bubble.right { background: var(--color-primary); color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
+
+.chat-notification {
+    margin-top: 10px;
+    background: #10B981; 
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+    animation: bounce 2s infinite;
+}
+.chat-notification svg { width: 20px; height: 20px; }
+
+/* Visual 3: Gráfico */
+/* --- CORREÇÃO DO GRÁFICO (DASHBOARD UI) --- */
+
+.fake-graph-ui {
+    width: 280px;
+    height: 200px;
+    position: relative;
+    padding: 20px 20px 0 20px; /* Espaço para não cortar o topo */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Fundo com linhas de grade (estilo dashboard) */
+.graph-grid-lines {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.graph-grid-lines span {
+    width: 100%;
+    height: 1px;
+    background: #fff;
+}
+
+/* Container das Barras */
+.graph-bars {
+    display: flex;
+    align-items: flex-end; /* Garante que cresçam do chão para o teto */
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    gap: 12px;
+    z-index: 1;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Eixo X Forte */
+}
+
+/* Barras Individuais */
+.bar {
+    flex: 1; /* Largura igual para todas */
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    transition: height 1s cubic-bezier(0.34, 1.56, 0.64, 1); /* Efeito elástico suave */
+    transform-origin: bottom;
+}
+
+/* Barra Ativa (Destaque) */
+.bar.active {
+    background: var(--gradient-primary); /* Azul/Roxo */
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    position: relative;
+}
+
+/* Tooltip Flutuante na barra ativa */
+.bar-tooltip {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: var(--color-bg-main);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    
+    /* Setinha do tooltip */
+    display: flex;
+    justify-content: center;
+}
+
+.bar-tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+/* Animação de entrada (Opcional - só funciona se tiver JS para ativar, 
+   mas deixa pronto para quando o elemento aparecer na tela) */
+@keyframes growUp {
+    from { height: 0; }
+}
+
+.benefit-row:hover .bar {
+    animation: none; 
+}
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 900px) {
+    .benefit-row {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center; 
+    }
+    
+    .benefit-row.reverse .benefit-content {
+        order: 1; 
+    }
+    .benefit-row.reverse .benefit-visual {
+        order: 2;
+    }
+    
+    .benefit-content p, .benefit-checklist {
+        text-align: left; /* Mantém legibilidade do texto à esquerda ou centralizado conforme gosto */
+    }
+    
+    .benefit-checklist {
+        display: inline-block; /* Ajuda a centralizar o bloco da lista */
+    }
+
+    .benefit-number {
+        left: 50%;
+        transform: translateX(-50%); /* Centraliza o numerozão */
+        top: -4rem;
+    }
+}

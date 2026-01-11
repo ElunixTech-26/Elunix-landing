@@ -108,3 +108,27 @@ p {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* ANIMAÇÕES DE SCROLL REVEAL */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px); /* Começa 30px abaixo */
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); /* Curva de animação elegante */
+    will-change: opacity, transform; /* Otimização de performance */
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay para efeito Cascata */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; 
+}
