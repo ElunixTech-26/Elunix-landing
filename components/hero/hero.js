@@ -12,7 +12,6 @@ if (card) {
     card.style.transform = `
       rotateX(${rotateX}deg)
       rotateY(${rotateY}deg)
-      translateY(-10px)
     `;
   });
 

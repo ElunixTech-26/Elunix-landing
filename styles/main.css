@@ -1,13 +1,38 @@
-:root{
+:root {
 
-    
-    /* definir as variaveis de cor e tamanhos e fontes aqui */
+  --font-primary: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+ 
+  /* BACKGROUND */
+  --color-bg-main: #05070d;
+  --color-bg-soft: #020617;
+  --color-bg-card: #0b1225;
+
+  /* TEXT COLORS */
+  --color-text-main: #f8fafc;
+  --color-text-soft: rgba(248, 250, 252, 0.75);
+  --color-text-muted: rgba(248, 250, 252, 0.55);
+
+  /* BRAND COLORS */
+  --color-primary: #3B82F6;   
+  --color-secondary: #6D28D9; 
+  --color-accent: #1E40AF;
+
+
+  /* GRADIENTS */
+  --gradient-primary: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+
+  /* BORDERS */
+  --border-soft: 1px solid rgba(255,255,255,0.06);
+  --border-accent: 1px solid rgba(125, 211, 252, 0.4);
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    
+    font-family: var(--font-primary);
 }
