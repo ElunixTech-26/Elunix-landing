@@ -1,0 +1,145 @@
+.cta-section {
+    padding: 100px 0;
+    position: relative;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.05) 0%, rgba(5, 7, 13, 0) 70%);
+}
+
+.cta-box {
+    background: linear-gradient(135deg, #0b1225 0%, #020617 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 32px;
+    padding: 80px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+    
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* Glow decorativo atrás do texto */
+.cta-glow {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-content h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: #fff;
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.cta-content p {
+    color: var(--color-text-muted);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+/* Botão Grande do CTA */
+.btn-large {
+    padding: 18px 48px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 999px; /* Pill shape */
+    gap: 12px;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); /* Glow no botão */
+}
+.btn-large:hover {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+    transform: translateY(-2px);
+}
+.btn-large svg {
+    width: 20px;
+    height: 20px;
+}
+
+.cta-note {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+.cta-note svg {
+    width: 16px;
+    height: 16px;
+    color: #10B981; /* Verde de verificado */
+}
+
+
+@media (max-width: 768px) {
+    
+    .cta-section {
+        padding: 40px 16px;
+        background: radial-gradient(circle at center, rgba(59, 130, 246, 0.08) 0%, rgba(5, 7, 13, 0) 60%);
+    }
+
+    .cta-box {
+        padding: 40px 20px;
+        border-radius: 24px;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    }
+
+    .cta-content {
+        width: 100%;
+    }
+
+    .cta-content h2 {
+        font-size: 1.6rem; 
+        margin-bottom: 12px;
+        letter-spacing: -0.02em; 
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+        margin-bottom: 28px;
+        padding: 0;
+        max-width: 100%;
+        color: rgba(248, 250, 252, 0.7); 
+    }
+    .cta-actions {
+        width: 100%;
+    }
+
+    .btn-large {
+        width: 100%;
+        padding: 16px 0;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cta-glow {
+        width: 120%; 
+        height: 300px;
+        top: -20%;
+        opacity: 0.4;
+        filter: blur(60px); 
+    }
+    
+    .cta-note {
+        font-size: 0.8rem;
+    }
+}
