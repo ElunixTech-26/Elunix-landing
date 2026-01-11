@@ -1,0 +1,144 @@
+/* --- SERVICES SECTION --- */
+.services {
+    padding: 120px 0;
+    background: var(--color-bg-main);
+    position: relative;
+}
+
+/* Header centralizado para esta seção */
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 80px auto;
+}
+
+.section-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--color-text-muted);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    align-items: stretch; /* Garante que todos tenham a mesma altura */
+}
+
+/* CARD BASE */
+.service-card {
+    background: var(--color-bg-card); 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px 32px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efeito Hover Premium */
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(59, 130, 246, 0.3); /* Azul da marca */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Ícone */
+.card-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.card-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.service-card:hover .card-icon {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+/* Tipografia do Card */
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.service-desc {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 32px;
+    flex-grow: 1;
+}
+
+.service-features {
+    list-style: none;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.service-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-text-soft);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.service-features li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-secondary); 
+    border-radius: 50%;
+}
+
+.service-card.featured::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-primary);
+    opacity: 0.7;
+}
+
+.service-card.featured {
+    background: linear-gradient(180deg, rgba(11, 18, 37, 1) 0%, rgba(5, 7, 13, 1) 100%);
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .services {
+        padding: 80px 0;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .service-card {
+        padding: 30px 24px;
+    }
+}
