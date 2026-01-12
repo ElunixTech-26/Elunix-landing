@@ -1,33 +1,45 @@
 :root {
 
+  /* FONT */
   --font-primary: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
- 
-  /* BACKGROUND */
-  --color-bg-main: #05070d;
-  --color-bg-soft: #020617;
-  --color-bg-card: #0b1225;
 
-  /* TEXT COLORS */
-  --color-text-main: #f8fafc;  
-  --color-text-main: #f8fafc;
-  --color-text-muted: #94a3b8; 
+  /* BACKGROUNDS  */
+  --color-bg-main: #070b16;   
+  --color-bg-soft: #0b1020;   
+  --color-bg-card: #11172a;  
 
-  /* BRAND COLORS */
-  --color-primary: #3B82F6;   
-  --color-secondary: #6D28D9; 
-  --color-accent: #1E40AF;
+  /* TEXT */
+  --color-text-main: #f1f5f9;  
+  --color-text-muted: #cbd5e1;  
+  --color-text-soft: #94a3b8;
 
+  /* BRAND  */
+  --color-primary: #6366f1;   
+  --color-secondary: #818cf8;  
+  --color-accent: #4f46e5;     
 
-  /* GRADIENTS */
+  /* GRADIENTS*/
   --gradient-primary: linear-gradient(
     90deg,
     var(--color-primary),
     var(--color-secondary)
   );
 
-  /* BORDERS */
-  --border-soft: 1px solid rgba(255,255,255,0.06);
-  --border-accent: 1px solid rgba(125, 211, 252, 0.4);
+  /* BORDERS*/
+  --border-soft: 1px solid rgba(255,255,255,0.08);
+  --border-accent: 1px solid rgba(129, 140, 248, 0.45);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
+
+/* Ajuste o padding das suas seções para equilibrar */
+.authority, .services, .benefits {
+    /* Antes devia estar uns 120px. Baixe para 60px ou 80px */
+    padding-top: 80px; 
+    padding-bottom: 80px;
 }
 
 *{
@@ -113,8 +125,8 @@ p {
 
 .reveal {
     opacity: 0;
-    transform: translateY(30px); /* Começa 30px abaixo */
-    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); /* Curva de animação elegante */
+    transform: translateY(30px); 
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); 
     will-change: opacity, transform; /* Otimização de performance */
 }
 
@@ -128,7 +140,8 @@ p {
 .delay-200 { transition-delay: 0.2s; }
 .delay-300 { transition-delay: 0.3s; }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px; 
+@media (max-width: 968px) {
+  html {
+    scroll-padding-top: 70px;
+  }
 }

@@ -12,18 +12,23 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
 }
 
 .header-inner {
+  display: flex;
   height: 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo img {
-  height: 46px;
+.logo {
+  height: 80px;
+}
+
+.logo img{
+  height: 100%;
 }
 
 /* NAV DESKTOP */
