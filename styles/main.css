@@ -8,9 +8,9 @@
   --color-bg-card: #0b1225;
 
   /* TEXT COLORS */
+  --color-text-main: #f8fafc;  
   --color-text-main: #f8fafc;
-  --color-text-soft: rgba(248, 250, 252, 0.75);
-  --color-text-muted: rgba(248, 250, 252, 0.55);
+  --color-text-muted: #94a3b8; 
 
   /* BRAND COLORS */
   --color-primary: #3B82F6;   
