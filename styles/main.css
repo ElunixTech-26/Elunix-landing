@@ -30,11 +30,6 @@
   --border-accent: 1px solid rgba(129, 140, 248, 0.45);
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 30px;
-}
-
 /* Ajuste o padding das suas seções para equilibrar */
 .authority, .services, .benefits {
     /* Antes devia estar uns 120px. Baixe para 60px ou 80px */
@@ -139,6 +134,12 @@ p {
 .delay-100 { transition-delay: 0.1s; }
 .delay-200 { transition-delay: 0.2s; }
 .delay-300 { transition-delay: 0.3s; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: -110px;
+}
+
 
 @media (max-width: 968px) {
   html {

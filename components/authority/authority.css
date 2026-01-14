@@ -110,6 +110,9 @@
 
 /* --- RESPONSIVIDADE--- */
 @media (max-width: 900px) {
+    .authority {
+        padding-top: 1rem;
+    } 
     .authority-container {
         grid-template-columns: 1fr;
         gap: 40px;
